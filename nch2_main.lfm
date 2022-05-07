@@ -1,0 +1,148 @@
+object Form_Main: TForm_Main
+  Left = 824
+  Height = 393
+  Top = 411
+  Width = 656
+  Caption = 'Apiglio NCH2'
+  ClientHeight = 393
+  ClientWidth = 656
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '1.8.4.0'
+  inline Frame_AufScript1: TFrame_AufScript
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Splitter_Horizon
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Height = 306
+    Top = 87
+    Width = 656
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 306
+    ClientWidth = 656
+    Constraints.MinHeight = 100
+    inherited ProgressBar: TProgressBar
+      AnchorSideLeft.Control = Frame_AufScript1
+      AnchorSideRight.Control = Frame_AufScript1
+      AnchorSideBottom.Control = Frame_AufScript1
+      Left = 6
+      Height = 12
+      Top = 288
+      Width = 644
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+    end
+    inherited Memo_out: TMemo
+      AnchorSideRight.Control = Frame_AufScript1
+      Left = 384
+      Height = 200
+      Top = 42
+      Width = 266
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+    end
+    inherited Button_run: TButton
+      Left = 384
+      Height = 34
+      Top = 248
+      Width = 85
+      BorderSpacing.Bottom = 6
+    end
+    inherited Button_pause: TButton
+      Left = 475
+      Height = 34
+      Top = 248
+      Width = 85
+      BorderSpacing.Bottom = 6
+    end
+    inherited Button_stop: TButton
+      Left = 565
+      Height = 34
+      Top = 248
+      Width = 85
+      BorderSpacing.Bottom = 6
+    end
+    inherited Button_ScriptLoad: TButton
+      Left = 6
+      Height = 34
+      Top = 248
+      Width = 85
+      BorderSpacing.Bottom = 6
+    end
+    inherited Button_ScriptSave: TButton
+      Left = 135
+      Height = 34
+      Top = 248
+      Width = 85
+      BorderSpacing.Bottom = 6
+    end
+    inherited Memo_cmd: TSynEdit
+      AnchorSideLeft.Control = Frame_AufScript1
+      Left = 6
+      Height = 200
+      Top = 42
+      Width = 214
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 6
+      Gutter.Width = 61
+      inherited SynLeftGutterPartList1: TSynGutterPartList
+        inherited SynGutterCodeFolding1: TSynGutterCodeFolding
+          AutoSize = False
+          Width = 12
+        end
+      end
+    end
+    inherited TrackBar: TTrackBar
+      AnchorSideLeft.Control = Frame_AufScript1
+      AnchorSideTop.Control = Frame_AufScript1
+      AnchorSideRight.Control = Frame_AufScript1
+      Left = 6
+      Height = 30
+      Top = 6
+      Width = 644
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 6
+      BorderSpacing.Right = 6
+    end
+  end
+  object Memo_File: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Splitter_Horizon
+    Left = 0
+    Height = 81
+    Top = 0
+    Width = 656
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -17
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  object Splitter_Horizon: TSplitter
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crVSplit
+    Left = 0
+    Height = 6
+    Top = 81
+    Width = 656
+    Align = alNone
+    Anchors = [akTop, akLeft, akRight]
+    ResizeAnchor = akTop
+  end
+end
